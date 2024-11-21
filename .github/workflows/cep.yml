@@ -31,7 +31,7 @@ jobs:
     # PASSO 5: Validar a saída
     - name: Validar saída
       run: |
-        if node fetch.js | grep -q "'logradouro'"; then
+        if node fetch.js | grep -q "'logradouro:'"; then
           echo "Validação bem-sucedida!";
         else
           echo "Validação falhou!";
