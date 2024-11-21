@@ -1,20 +1,24 @@
-async function consultaCepfetch(cep){
+async function consultaCepfetch(cep) {
     const url = `https://viacep.com.br/ws/${cep}/json/`;
     try {
-        const response = await fetch(url);
-        
-        if (!response.ok) {
-          throw new Error(`Erro na requisição: ${response.status}`);
-        }
-        
-        const data = await response.json(); 
-        console.log(data); 
-      } catch (error) {
-        console.error('Erro ao buscar os dados:', error);
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`Erro na requisição: ${response.status}`);
       }
+      const data = await response.json();
+  
+      if (data.logradouro) {
+        console.log("Validação bem-sucedida!");
+        process.exit(0); 
+      } else {
+        console.error("Validação falhou: Campo 'logradouro' não encontrado.");
+        process.exit(1); 
+      }
+    } catch (error) {
+      console.error('Erro ao buscar os dados:', error);
+      process.exit(1); // Código 1 para falha
     }
-//
-const cep = '03068010'
-consultaCepfetch(cep)
-
+  }
+  
+  consultaCepfetch('03068010');
   
