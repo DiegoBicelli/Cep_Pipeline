@@ -21,5 +21,5 @@ async function consultaCepfetch(cep) {
     }
   }
   
-  consultaCepfetch('03068010');
+  consultaCepfetch('030680');
   
