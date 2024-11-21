@@ -26,12 +26,5 @@ jobs:
 
     # PASSO 4: Executar o script de consulta
     - name: Executar o script de consulta
-      run: |
-        RESULTADO=$(node fetch.js)  # Executa o script e captura a saída
-        echo "Resultado da consulta: $RESULTADO"  # Exibe a saída no log
+      run: node fetch.js
 
-    # PASSO 5: Mostrar resultado
-    - name: Mostrar resultado da consulta
-      run: |
-        echo "Resultado da consulta completa:"
-        echo "$RESULTADO"  # Exibe o resultado completo da variável RESULTADO

@@ -9,6 +9,7 @@ async function consultaCepfetch(cep) {
   
       if (data.logradouro) {
         console.log("Validação bem-sucedida!");
+        console.log(data)
         process.exit(0); 
       } else {
         console.error("Validação falhou: Campo 'logradouro' não encontrado.");
