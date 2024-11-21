@@ -3,7 +3,7 @@ Usando o arquivo .yml para testar as requisições com FETCH e AXIOS
 
 #Modelos de Teste
 ## Modelo 1
-- **Testar API de CEP: **
+- **Testar API de CEP:**
   Faz uma requisição Curl direto para api de cep
 ## Modelo 2 
 - **Testar Get com Fetch:** 
