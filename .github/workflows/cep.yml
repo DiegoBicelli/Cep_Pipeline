@@ -28,12 +28,3 @@ jobs:
     - name: Executar o script de consulta
       run: node fetch.js 
 
-    # PASSO 5: Validar a saída
-    - name: Validar saída
-      run: |
-        if node caminho/do/seu/script.js | grep -q '"logradouro"'; then
-          echo "Validação bem-sucedida!";
-        else
-          echo "Validação falhou!";
-          exit 1;
-        fi
