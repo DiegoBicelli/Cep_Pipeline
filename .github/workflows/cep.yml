@@ -26,7 +26,7 @@ jobs:
 
     # PASSO 4: Executar o script de consulta
     - name: Executar o script de consulta
-      run: node C:\Users\Digaz\Desktop\pipeline\fetch.js 
+      run: node ..\fetch.js 
 
     # PASSO 5: Validar a saída
     - name: Validar saída
