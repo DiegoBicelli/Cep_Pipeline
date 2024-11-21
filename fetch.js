@@ -1,3 +1,4 @@
+
 async function consultaCepfetch(cep) {
     const url = `https://viacep.com.br/ws/${cep}/json/`;
     try {
